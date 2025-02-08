@@ -47,3 +47,7 @@ The app should now be running on http://localhost:3000.
 3. The game will display a winning message and score when a player wins.
 4. Click the restart button to restart the game.
 5. Players can view result history in score board.
+
+## DEMO
+
+https://thanhthien269.github.io/tic-tac-toe/
