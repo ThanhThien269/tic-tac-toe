@@ -1,19 +1,18 @@
 # Tic Tac Toe React App
 
-This is a simple Tic Tac Toe game built with React. The game allows two players to play against each other, and it includes a feature that displays falling emojis when a player wins.
+This is a simple Tic Tac Toe game built with React. The game allows two players to play against each other, and it includes a feature that displays history when a player wins.
 
 ## Features
 
 - Two-player game
 - Displays winning messages
-- Falling emoji animation when a player wins
 - Restart game functionality
-- Responsive design
+- Score board with hisory
 
 ## Technologies Used
 
 - React
-- JavaScript (ES6+)
+- JavaScript
 - HTML5
 - CSS3
 
