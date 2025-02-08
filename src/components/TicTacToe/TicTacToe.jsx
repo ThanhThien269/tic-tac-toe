@@ -6,7 +6,11 @@ const TicTacToe = () => {
   const [go, setGo] = useState("circle");
   const [winMsg, setwinMsg] = useState(null);
 
+
   const [message, setMessage] = useState("It's " + go + " turn.");
+const [scores, setScores] = useState({ circle: 0, cross: 0 });
+const [history, setHistory] = useState([]);
+  
 
 
   useEffect(() => {
@@ -48,6 +52,8 @@ const TicTacToe = () => {
       );
       if (circleWins) {
         setwinMsg("Circle Wins!");
+        setScores((scores) => ({ ...scores, circle: scores.circle + 1 }));
+        setHistory((history) => [...history, "Circle Win"]);
         winnerFound = true;
         return;
       }
@@ -57,6 +63,8 @@ const TicTacToe = () => {
       let crosswWins = array.every((cell) => cells[cell] === "cross");
       if (crosswWins) {
         setwinMsg("Cross Wins!");
+        setScores((scores) => ({ ...scores, cross: scores.cross + 1 }));
+        setHistory((history) => [...history, "Cross Win"]);
         winnerFound = true;
         return;
       }
@@ -64,6 +72,7 @@ const TicTacToe = () => {
 
     if (!winnerFound && cells.every((cell) => cell !== "")) {
       setwinMsg("It's a Draw!");
+      setHistory((history) => [...history, "Draw"]);
     }
   };
   return (
@@ -103,6 +112,18 @@ const TicTacToe = () => {
       <h2 className='title'>
         History
       </h2>
+      <div className="history">
+    {history.map((result, index) => (
+      <p key={index} className={index === history.length - 1 ? "latest-game" : ""}>{result}</p>
+    ))}
+    <hr />
+    <div className="score">
+    <p className='circle-player'>Circle: {scores.circle}</p>
+    <h4>VS</h4>
+    <p className='cross-player'>Cross: {scores.cross}</p>
+    </div>
+   
+  </div>
      </div>
     </div>
   );

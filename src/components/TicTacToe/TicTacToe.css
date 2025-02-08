@@ -10,19 +10,19 @@
     flex-direction: column;
     align-items: center;
   }
-  .scoreboarc {
+  .scoreboard {
     width: 30%;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    border-left: #f1f1f1 1px ridge;
   }
   .title {
     color: #f1f1f1;
+    text-align: center;
   }
 }
-.player {
-  font-size: large;
-  color: #26ffcb;
-}
+
 .gameboard {
   width: 30rem;
   height: 30rem;
@@ -82,4 +82,19 @@
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+.latest-game {
+  font-weight: bold;
+  color: #26ffcb;
+}
+.score {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  .circle-player {
+    color: #db3636;
+  }
+  .cross-player {
+    color: #111212;
+  }
 }
