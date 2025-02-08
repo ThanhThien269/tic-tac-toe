@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100%;
+  color: #f1f1f1;
+  .game {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .scoreboarc {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    color: #f1f1f1;
+  }
+}
+.player {
+  font-size: large;
+  color: #26ffcb;
+}
+.gameboard {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f3540;
+  border-radius: 1rem;
+}
+
+.square {
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #0f1b21;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.message {
+  font-family: "Gill Sans";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle {
+  height: 9rem;
+  width: 9rem;
+  background-color: inherit;
+  border: 20px;
+  background-image: url("../../assets/circle.png");
+  background-size: cover;
+}
+
+.cross {
+  height: 9rem;
+  width: 9rem;
+  background-color: inherit;
+  border: 20px;
+  background-image: url("../../assets/cross.png");
+  background-size: cover;
+}
+.restart {
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  background: #1f3540;
+  color: #26ffcb;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
